@@ -14,4 +14,7 @@
 vendedor = input()
 salario_fixo = float(input())
 total_vendas = float(input())
-
+calculo_desconto = 0.15 * total_vendas
+aumento_salarial = salario_fixo + calculo_desconto
+print(vendedor)
+print(f'R$ {aumento_salarial:.2f}')
