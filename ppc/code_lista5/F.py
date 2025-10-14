@@ -1,13 +1,23 @@
-a1, b1, c1 = map(int, input().split())
-a2, b2, c2 = map(int, input().split())
-total_a = a1 - a2
-total_b = b1 - b2
-total_c = c1 - c2
-if (total_a < 0 and total_b < 0 and total_c < 0):
-    print(abs(total_a + total_b + total_c))
-elif ((total_a > 0 and total_b < 0 and total_c < 0)):
-    print(abs(total_b + total_c))
-elif (total_a > 0 and total_b > 0 and total_c < 0):
-    print(abs(total_c))
-else:
-    print(0)
+carne_D, bife_D, massa_D = map(int, input().split())
+carne_P, bife_P, massa_P = map(int, input().split())
+
+carne = carne_D - carne_P
+bife = bife_D - bife_P
+massa = massa_D - massa_P
+
+soma_1 = 0
+soma_2 = 0
+soma_3 = 0
+
+if carne < 0:
+    soma_1 = abs(carne)
+
+if bife < 0:
+    soma_2 = abs(bife)
+
+if massa < 0:
+    soma_3 = abs(massa)
+
+soma = soma_1 + soma_2 + soma_3
+
+print(soma)
