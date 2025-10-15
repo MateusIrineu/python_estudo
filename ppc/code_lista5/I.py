@@ -1,12 +1,16 @@
-a = int(input())
-b = int(input())
-c = int(input())
+a1 = int(input())
+a2 = int(input())
+a3 = int(input())
 
-if (a <= b and b <= c and a <= c) or (b <= a and a <= c and b <= c):
-    menor = (a * 4) + (b * 2)
-elif (a >= b and b >= c and a >= c) or (a >= c and c >= b and a >= b):
-    menor = (c * 4) + (b * 2)
-elif (a <= b and c <= a and c <= b) or (c <= b and a <= c and a <= b):
-    menor = (c * 2) + (a * 2)
+caso_1 = (a2 * 2) + (a3 * 4)
+caso_2 = (a1 * 2) + (a3 * 2)
+caso_3 = (a1 * 4) + (a2 * 2)
+
+if caso_1 <= caso_2 and caso_1 <= caso_3:
+    menor = caso_1
+elif caso_2 <= caso_1 and caso_2 <= caso_3:
+    menor = caso_2
+else:
+    menor = caso_3
 
 print(menor)
