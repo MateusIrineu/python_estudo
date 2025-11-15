@@ -1,12 +1,12 @@
 
-def divisores_r(n, d):
-    if d == 1:
+def divisores_r(n, k):
+    if k == 1:
         divs = [1]
         return divs
     else:
-        lista_divs = divisores_r(n, d - 1)
-        if n % d == 0:
-            lista_divs.append(d)
+        lista_divs = divisores_r(n, k - 1)
+        if n % k == 0:
+            lista_divs.append(k)
         return lista_divs
     
 def divisores(n):
